@@ -1,15 +1,18 @@
 const mongoose = require('mongoose')
 
 const tableSchema = new mongoose.Schema({
+    restaurant_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'restaurant',
+    },
+    identification:{
+        type:String,
+    },
     capacity:{
         type:Number,
         required: true
-    },
-    status:{
-        type:String,
-        enum:['free', 'occupied','booked']
     }
 })
 
-
-module.exports = tableSchema
+const tableModel = mongoose.model('table', tableSchema)
+module.exports = tableModel

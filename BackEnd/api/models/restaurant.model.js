@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
+const restaurantSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Name is required']
@@ -9,20 +9,20 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Direction is required']
   },
-  openingHours: {
-    type: String,
-    enum:['12:00-22:00', '12:00-16:00']
+  has_breakfast: {
+    type: Boolean
   },
-  kitchenHours: {
-    type: String,
-    enum:['12:00-21:00', '12:00-15:00']
+  has_lunch: {
+    type: Boolean
   },
-  waiters:{
+  has_dinner: {
+    type: Boolean
+  },
+  owner_id:{
     type:mongoose.Schema.Types.ObjectId,
     ref:'users',
-  },
-  tables: [tableSchema]
+  }
 })
 
-const userModel = mongoose.model('restaurant', userSchema)
-module.exports = userModel
+const restaurantModel = mongoose.model('restaurant', restaurantSchema)
+module.exports = restaurantModel
