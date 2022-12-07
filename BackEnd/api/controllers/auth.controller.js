@@ -6,13 +6,12 @@ const UserModel = require('../models/users.model')
 async function signup (req, res) {
   try {
     req.body.password = bcrypt.hashSync(req.body.password, 10)
-    req.body.role = "user"
     const user = await UserModel.create(req.body)
     const payload = { email: user.email }
     
     const token = jwt.sign(payload, process.env.SECRET, { expiresIn: '1h' })
 
-    res.status(200).json({ email: user.email, token }) // token: token
+    res.status(200).json({ email: user.email, token_value: token }) // token: token
   } catch (error) {
     res.status(500).send(`Error creating user: ${error}`)
     throw new Error(`Error creating user: ${error}`)
@@ -37,7 +36,7 @@ async function login (req, res) {
 
       const token = jwt.sign({ email: user.email }, process.env.SECRET, { expiresIn: '1h' })
 
-      res.status(200).json({ email: user.email, token })
+      res.status(200).json({ email: user.email,  token_value: token })
     })
   } catch (error) {
     res.status(500).send('Error logging user')

@@ -8,7 +8,7 @@ const {
     createUser,
     deleteUserById,
     updateUser
-} = require('../controllers/users.controller')
+} = require('../controllers/user.controller')
 
 router.get('/:id', authUser, getUserById)
 router.post('/', authUser, createUser)

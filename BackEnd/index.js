@@ -33,7 +33,7 @@ const { queryParser } = require('express-query-parser')
       
 
     // Init server
-    const PORT = process.env.PORT || 2222
+    const PORT = process.env.PORT || 8080
     app.listen(PORT, (err) => {
       if (err) {
         throw new Error(err)
