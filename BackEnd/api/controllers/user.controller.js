@@ -3,7 +3,6 @@ const {handleError}=require('../utils')
 const bcrypt = require('bcrypt')
 
 function getUserById(req,res){
-    req.body.password = bcrypt.hashSync(req.body.password, 10)
     UserModel.findById(req.params.id)
     .then(response=> res.json(response))
     .catch((err)=>
