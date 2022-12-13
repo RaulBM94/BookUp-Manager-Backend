@@ -4,10 +4,10 @@ const UserModel = require('../models/users.model')
 
 // Authenticate Middleware
 function authUser (req, res, next) {
-  if (!req.headers.token) {
+  if (!req.headers.token_value) {
     res.status(403).json({ error: 'No Token found' })
   } else {
-    jwt.verify(req.headers.token, process.env.SECRET, (err, token) => {
+    jwt.verify(req.headers.token_value, process.env.SECRET, (err, token) => {
       if (err) { res.status(403).json({ error: 'Token not valid' }) }
 
       UserModel.findOne({ email: token.email })

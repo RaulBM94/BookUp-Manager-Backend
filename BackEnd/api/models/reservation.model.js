@@ -6,7 +6,7 @@ const reservationSchema = new mongoose.Schema({
     },
     shift:{
         type: String,
-        enum: ['mañana', 'tarde','noche'],
+        enum: ['Mañana', 'Tarde','Noche'],
     },
     hour:{
         type:String,
@@ -14,10 +14,6 @@ const reservationSchema = new mongoose.Schema({
     restaurant_id:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'restaurant',
-    },
-    table_id:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'table',
     },
     customer_name:{
         type: String
@@ -29,7 +25,8 @@ const reservationSchema = new mongoose.Schema({
         type:String
     },
     people:{
-        type: Number
+        type: Number,
+        default: 1
     },
     notes:{
         type: String
