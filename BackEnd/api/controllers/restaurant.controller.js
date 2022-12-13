@@ -3,7 +3,7 @@ const RestaurantModel = require('../models/restaurant.model')
 const { handleError } = require('../utils')
 
 async function getMyRestaurant(req,res) {
-    const rest = await RestaurantModel.find({owner_id: res.locals.user.id})
+    const rest = await RestaurantModel.findOne({owner_id: res.locals.user.id})
     res.json(rest)
 }
 
