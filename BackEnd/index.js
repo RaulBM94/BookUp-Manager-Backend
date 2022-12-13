@@ -9,6 +9,7 @@ const { queryParser } = require('express-query-parser')
 ;(async function () {
   // MONGOOSE
   try {
+    mongoose.set('strictQuery', false)
     await mongoose.connect(process.env.MONGO_URL, {
       dbName: process.env.MONGO_DB || 'test'
     })

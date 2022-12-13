@@ -18,9 +18,13 @@ const restaurantSchema = new mongoose.Schema({
   has_dinner: {
     type: Boolean
   },
-  owner_id:{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:'users',
+  owner_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users',
+  },
+  num_tables: {
+    type: Number,
+    default: 1
   }
 })
 

@@ -6,7 +6,7 @@ const reservationSchema = new mongoose.Schema({
     },
     shift:{
         type: String,
-        enum: ['morning', 'afternoon','evening'],
+        enum: ['mañana', 'tarde','noche'],
     },
     hour:{
         type:String,

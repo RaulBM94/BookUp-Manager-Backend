@@ -26,7 +26,6 @@ async function sendemail(req, res) {
   res.json('received')
 
 }
-sendemail().catch(console.error);
 
 module.exports = {
   sendemail
