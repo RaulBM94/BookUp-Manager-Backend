@@ -2,6 +2,11 @@ const RestaurantModel = require('../models/restaurant.model')
 
 const { handleError } = require('../utils')
 
+async function getMyRestaurant(req,res) {
+    const rest = await RestaurantModel.findOne({owner_id: res.locals.user.id})
+    res.json(rest)
+}
+
 function createRestaurant(req, res) {
     let restaurant = {
         name: req.body.name,
@@ -36,6 +41,7 @@ function deleteRestaurant(req, res) {
 }
 
 module.exports = {
+    getMyRestaurant,
     createRestaurant,
     updateRestaurant,
     deleteRestaurant
