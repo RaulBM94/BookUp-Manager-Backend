@@ -30,6 +30,10 @@ const reservationSchema = new mongoose.Schema({
     },
     notes:{
         type: String
+    },
+    confirmed:{
+        type: Boolean,
+        default: false
     }
 })
 

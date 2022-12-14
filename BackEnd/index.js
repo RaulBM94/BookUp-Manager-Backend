@@ -22,7 +22,7 @@ const { queryParser } = require('express-query-parser')
     // ADDING MIDDLEWARES & ROUTER
     const app = express()
       .use(cors())
-      .use(morgan('combined')) // Show log for every request in "combined" format.
+      .use(morgan('dev')) // Show log for every request in "combined" format.
       .use(express.json()) // Parses .json format into js objects 
       .use(queryParser({
         parseNull: false,
