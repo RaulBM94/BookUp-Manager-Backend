@@ -17,19 +17,15 @@ GET    | /users/:id | YES | user | Get user by Id |  | `userById`
 GET    | /reservations/restaurant | YES | user | Get all reservations by query |  | `[reservations Object]`
 GET    | /restaurant/ | YES | user | Get my restaurant | | `[restaurant Object]` 
 GET    | /users/clients | YES | admin | Get all clients of lawyer |  | `[clients Object]`
-GET    | /tables/ | YES | user | Get tables of restaurant | `tables` | `[tables Object]`
 POST    | /users | YES | user | Post one user | `name`, `surname`, `email`, `password` | `new user`
 POST    | /reservation/ | YES | user | Post one reservation | `date`, `shift`, `hour`,`restaurant_id`,`table_id`,`customer_name`, `customer_phone`,`customer_email`, `people`, `notes`, `confirmed` | `new reservation Object`
 POST    | /restaurant/ | YES | user | Post one restaurant | `name`, `direction`, `has_breakfast`, `has_lunch`,`has_dinner`,`owner_id`,`num_tables` | `new restaurant`
-POST    | /tables | YES | user | Post one table | `restaurant_id`, `identification`, `capacity` | `new table`
 PUT     | /users/:id | YES | user | Put one user of restaurant | `userId`, `email`, `password` | `modified Object`
 PUT     | /reservation/:id | YES | user | Put one reservation | `date`, `shift`, `hour`,`restaurant_id`,`table_id`,`customer_name`, `customer_phone`,`customer_email`, `people`, `notes`, `confirmed` | `modified Object`
 PUT     | /restaurant/:id | YES | user | Put one user of reservation | `name`, `direction`, `has_breakfast`, `has_lunch`,`has_dinner`,`owner_id`,`num_tables` | `modified Object`
-PUT     | /tables/:id | YES | user | Put one table of restaurant | `restaurant_id`, `identification`, `capacity`| `modified Object`
 DELETE  | /users/:id | YES | user | Delete one user | `userId` | `delete user`
 DELETE  | /reservation/:id | YES | user | Delete one reservation | `restaurantId` | `delete reservation`
 DELETE  | /restaurant/:id | YES | user | Delete one restaurant | `restaurantId` | `delete restaurant`
-DELETE  | /tables/:id | YES | user | Delete one table | `tableid` | `delete table Object`
 
 ## Tools 🛠️
 
