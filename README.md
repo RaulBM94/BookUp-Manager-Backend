@@ -25,7 +25,7 @@ PUT     | /reservation/:id | YES | user | Put one reservation | `date`, `shift`,
 PUT     | /restaurant/:id | YES | user | Put one user of reservation | `name`, `direction`, `has_breakfast`, `has_lunch`,`has_dinner`,`owner_id`,`num_tables` | `modified Object`
 DELETE  | /users/:id | YES | user | Delete one user | `userId` | `delete user`
 DELETE  | /reservation/:id | YES | user | Delete one reservation | `restaurantId` | `delete reservation`
-DELETE  | /restaurant/:id | YES | user | Delete one restaurant | `restaurantId` | `delete restaurant`
+
 
 ## Tools 🛠️
 
