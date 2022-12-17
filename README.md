@@ -1,6 +1,6 @@
 # BookUp-Manager
 
-API for management and administration of your restaurant
+API for management and administration of your restaurant.
 
 ### User Signup/Login
 
