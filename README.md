@@ -16,7 +16,7 @@ METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAM
 GET    | /users/:id | YES | user | Get user by Id |  | `userById`
 GET    | /reservations/restaurant | YES | user | Get all reservations by query |  | `[reservations Object]`
 GET    | /restaurant/ | YES | user | Get my restaurant | | `[restaurant Object]` 
-GET    | /users/clients | YES | admin | Get all clients of lawyer |  | `[clients Object]`
+GET    | /users/clients | YES | user | Get all clients of lawyer |  | `[clients Object]`
 POST    | /users | YES | user | Post one user | `name`, `surname`, `email`, `password` | `new user`
 POST    | /reservation/ | YES | user | Post one reservation | `date`, `shift`, `hour`,`restaurant_id`,`table_id`,`customer_name`, `customer_phone`,`customer_email`, `people`, `notes`, `confirmed` | `new reservation Object`
 POST    | /restaurant/ | YES | user | Post one restaurant | `name`, `direction`, `has_breakfast`, `has_lunch`,`has_dinner`,`owner_id`,`num_tables` | `new restaurant`
