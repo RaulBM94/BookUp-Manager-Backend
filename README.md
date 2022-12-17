@@ -39,6 +39,6 @@ DELETE  | /restaurant/:id | YES | user | Delete one restaurant | `restaurantId` 
 
 ## Authors ✒️
 
-* **Raúl Bruno Mendoza** - [JeniferCB](https://github.com/RaulBM94)
+* **Raúl Bruno Mendoza** - [RaulBM94](https://github.com/RaulBM94)
 * **Nicolás Nahuel Faisca Silva** - [NickNahuel23](https://github.com/NickNahuel23)
-* **Álvaro Acevedo** - [AlxMen](https://github.com/alvaroacevedo)
+* **Álvaro Acevedo** - [alvaroacevedo](https://github.com/alvaroacevedo)
