@@ -2,8 +2,8 @@ const nodemailer = require("nodemailer");
 
 async function sendemail(req, res) {
 
-  let email = req.body.email
-  let msg = req.body.msg
+  let email = req.body.reminder.email
+  let msg = req.body.reminder.msg
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -18,11 +18,10 @@ async function sendemail(req, res) {
   let info = await transporter.sendMail({
     from: '"BookUpManager" <bookupmanager@gmail.com>', // sender address
     to: email, // list of receivers
-    subject: "Nueva funcionalidad de BookUpManager ✔", // Subject line
+    subject: "Recordatorio de Reserva", // Subject line
     text: msg, // plain text body
-    html: "<b>HTML: BookUpManager se congratula de anunciar que la funcionalidad de envío de mensajes ya está operativa  👏👏👏</b>", // html body
+    // html: "<b>HTML: BookUpManager se congratula de anunciar que la funcionalidad de envío de mensajes ya está operativa</b>", // html body
   });
-
 
   console.log('Email sent')
   res.json('received')
