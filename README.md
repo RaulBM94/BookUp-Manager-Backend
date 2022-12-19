@@ -6,7 +6,7 @@ API for management and administration of your restaurant.
 
 METHOD | ENDPOINT         | TOKEN | ROLE | DESCRIPTION              | POST PARAMS                                                                                   | RETURNS
 -------|------------------|-------|------|--------------------------|-----------------------------------------------------------------------------------------------|--------------------
-POST   | /auth/signup     | YES   |      | User Signup              | `name`, `surname`, `phone`, `email`, `password`, `password`, `role` | `token`
+POST   | /auth/signup     |    |      | User Signup              | `name`, `surname`, `phone`, `email`, `password`, `password`, `role` | `token`
 POST   | /auth/login      | -     |      | User Login               | `email`, `password`                                             | `token`
 
 ### Users Endpoints
