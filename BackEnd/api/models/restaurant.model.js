@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const restaurantSchema = new mongoose.Schema({
-  name: {
+  restaurant_name: {
     type: String,
     required: [true, 'Name is required']
   },
